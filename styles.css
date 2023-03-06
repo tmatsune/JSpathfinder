@@ -1,0 +1,100 @@
+body {
+    background: white;
+}
+
+#canvas1 {
+    margin-top: 8%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+}
+
+#canvasBg {
+    background: blue;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 5px solid black;
+}
+
+#enemyDamaged,
+#arrowImage,
+#arrowImageLeft,
+#arrowImageDown,
+#arrowImageUp {
+    display: none;
+}
+.sq{
+    margin-left: 2%;
+    font-size: 1.12rem;
+}
+.redSquare{
+    margin-bottom: 6px;
+    margin-left: 4px;
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    background-color: red;
+}
+.pinkSquare {
+    margin-left: 4px;
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    background-color: deeppink;
+}
+.blackSquare {
+    margin-left: 4px;
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    background-color: black;
+}
+.yellowSquare{
+    margin-left: 4px;
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    background-color: yellow;
+}
+.showNodes{
+    display: flex;
+}
+
+.brand{
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+.wrapper{
+    position: fixed;
+    border-style: solid;
+    border-radius: 2px;
+    padding-left: 200px;
+    top: 12%;
+    right: 30%;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+    background-color: ghostwhite;
+    z-index: 1;
+    display: none;
+
+}
+.wrapper .popup{
+    position: absolute;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: ghostwhite;
+    width: 480px;
+    height: 480px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+.instructions{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
