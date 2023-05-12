@@ -1,14 +1,31 @@
 body {
-    background: white;
+    background: white !important;
+    background: rgb(70, 70, 70) !important;
+    overflow-x: hidden;
+    color: white !important;
 }
 
-#canvas1 {
-    margin-top: 8%;
+#scaleWrapper{
+    transform: scale(.99);
+    background: linear-gradient(115deg, rgba(130, 109, 249, 0.1), rgba(218, 106, 255, 0.2)) !important;
+    background: linear-gradient(115deg, rgba(253, 245, 254, 0.22), rgba(188, 171, 253, 0.22))!important;
+    height: 180vh;
+    box-shadow: 8px 18px 16px 0px rgb(1, 1, 1, 0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+#bgImage{
     position: absolute;
-    top: 70%;
+    height: 130vh;
+}
+#canvas1 {
+    margin-top: 40%;
+    position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 5px solid black;
+    margin-bottom: 80%;
 }
 
 #canvasBg {
@@ -66,7 +83,6 @@ body {
 
 .brand{
     text-align: center;
-    font-family: 'Outfit', sans-serif;
 }
 .wrapper{
     position: fixed;
@@ -78,23 +94,93 @@ body {
     bottom: 0;
     width: 500px;
     height: 500px;
-    background-color: ghostwhite;
     z-index: 1;
     display: none;
-
+    border-radius: 8px;
+    padding: 6px;
+    background: linear-gradient(125deg,  rgba(51, 45, 69, 0.42), rgba(122, 91, 250, 0.42));
+    backdrop-filter: blur(20px);
 }
-.wrapper .popup{
-    position: absolute;
-    border-radius: 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: ghostwhite;
-    width: 480px;
-    height: 480px;
-    z-index: 2;
-    box-sizing: border-box;
+
+.popup h3{
+    
+}
+.popup li{
+    list-style: none;
+    margin-top: 4%;
+    
 }
 .instructions{
     font-family: 'Plus Jakarta Sans', sans-serif;
+}
+#dot {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 0;
+    background: linear-gradient(180deg, rgb(243, 255, 17), rgb(243, 255, 25));
+    left: 34%;
+    top: 18%;
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(-600px);
+    }100%{
+        transform: translateX(860px);
+    }
+}
+#dot1 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 0;
+    background: linear-gradient(180deg, rgb(17, 120, 255), rgb(41, 101, 252));
+    left: 28%;
+    top: 18%;
+    animation: move1 3.6s linear infinite;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateY(-600px);
+    }100% {
+        transform: translateY(860px);
+    }
+}
+
+#dot2 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 0;
+    background: linear-gradient(180deg, rgb(173, 31, 255), rgb(208, 65, 255));
+    left: 34%;
+    top: 82%;
+    animation: move2 3.6s linear infinite;
+}
+@keyframes move2 {
+    0% {
+            transform: translateX(800px);
+    }100% {
+            transform: translateX(-660px);
+    }
+}
+#dot3{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 0;
+    background: linear-gradient(180deg, rgb(31, 87, 255), rgb(65, 71, 255));
+    left: 64%;
+    top: 82%;
+    animation: move3 3.6s linear infinite;
+}
+@keyframes move3 {
+    0% {
+        transform: translateY(600px);
+    }100% {
+        transform: translateY(-860px);
+    }
 }

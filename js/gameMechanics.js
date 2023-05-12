@@ -78,6 +78,7 @@ function aStarAlgorithm(start, goal, grid){
             node.updateNeightbors(grid)
         })
     }
+    
     var count = 0
     testOpenSet.push(start)
     var pathCount = 1
@@ -93,6 +94,7 @@ function aStarAlgorithm(start, goal, grid){
         let currIndex = 0
     
         for(const [index, element] of testOpenSet.entries()){
+            console.log(element.fScore)
             // looks for node with lowest fScore, if found make set it to currNode
             // if fScore of item in lis is less than fScore of currNode, make priority
             if(element.fScore < currNode.fScore){//getHeu(currNode, goal), fScore[currNode.id]
@@ -153,6 +155,7 @@ function aStarAlgorithm(start, goal, grid){
             count += 1
             tentativeGscore = currNode.gScore + 1
             if(tentativeGscore < neighbor.gScore){//Infinity
+                //console.log(tentativeGscore, neighbor.gScore)
                 cameFrom[neighbor.id] = currNode
                 neighbor.gScore = tentativeGscore
                 neighbor.fScore = tentativeGscore + getHeu(neighbor, goal)
@@ -447,6 +450,7 @@ function makeGrid(){
             grid[i].push(node)
         }
     }
+    console.log(grid)
     return grid
 }
 function drawGrid(grid, context){
@@ -491,8 +495,6 @@ var resetButton = this.document.getElementById('reset')
 resetButton.onclick = function(){
     restart()
 }
-
-
 
 let lastTime = 1000
 drawGrid(mainGrid, ctx)
